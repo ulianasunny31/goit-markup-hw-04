@@ -201,6 +201,7 @@ address {
   background-color: var(--navy-blue);
   background-image: url(/images/main-section/people-office.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   border: none;
   letter-spacing: 0.02em;
   padding: 188px 0;
