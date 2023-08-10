@@ -328,11 +328,6 @@ address {
   width: calc((100%-2 * 24px) / 3);
 }
 
-.team-social-list {
-}
-
-.
-
 /**
   |============================
   | TEAM-SECTION
@@ -392,24 +387,6 @@ address {
   text-align: center;
 }
 
-.team-social-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-}
-
-.social-link {
-  background-color: var(--iris);
-  border-radius: 50%;
-}
-
-.social-icon {
-  fill: red;
-
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 /**
   |============================
   | CUSTOMERS SECTION
@@ -446,10 +423,20 @@ address {
   justify-content: center;
   align-items: center;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  padding: 16px 32px;
+}
+
+.custom-link {
+  color: var(--light-slate);
+  width: 100%;
+  height: 100%;
 }
 
 .logo-icon {
-  fill: var(--light-slate);
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
