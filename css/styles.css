@@ -98,6 +98,58 @@ footer .span-logo {
   margin-bottom: 16px;
 }
 
+.foot-container {
+  display: flex;
+}
+
+.logo-p-container {
+  margin-right: 120px;
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-social-list-item {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.f-soc-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--iris);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.f-soc-link:hover,
+.f-soc-link:focus {
+  background-color: var(--green);
+}
+
+.footer-social-icon {
+  fill: var(--cloud);
+  width: 16px;
+  height: 16px;
+}
+
+.p-social {
+  color: var(--cloud);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+
 /**
   |============================
   | HEADER
@@ -155,11 +207,24 @@ footer .span-logo {
   letter-spacing: 0.02em;
   font-weight: 500;
   padding: 24px 0;
+  position: relative;
 }
 
 .navigation .link:hover,
-.navigation .link:focus {
+.navigation .link:focus,
+.nav-link.current {
   color: var(--ocean);
+}
+
+.nav-link.current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 66px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--ocean);
 }
 
 address {
@@ -194,7 +259,6 @@ address {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
 }
 
 .title-section {
@@ -202,9 +266,11 @@ address {
   background-image: url(/images/main-section/people-office.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  max-width: 1440px;
   border: none;
   letter-spacing: 0.02em;
   padding: 188px 0;
+  margin: 0 auto;
 }
 
 .main-title {
@@ -361,6 +427,9 @@ address {
   background-color: var(--white);
   width: calc((100%-3 * 24px) / 4);
   border-radius: 0 0 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .t-list-container {
@@ -385,6 +454,42 @@ address {
   letter-spacing: 0.02em;
   color: var(--slate);
   text-align: center;
+  margin-bottom: 8px;
+}
+
+.team-social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.social-list-item {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.t-soc-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--iris);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.t-soc-link:hover,
+.t-soc-link:focus {
+  background-color: var(--ocean);
+}
+
+.social-icon {
+  fill: var(--cloud);
+  width: 16px;
+  height: 16px;
 }
 
 /**
@@ -486,6 +591,8 @@ address {
   background-color: var(--ocean);
   color: var(--white);
   border: 1px solid transparent;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 /* PICTURE LINKS */
@@ -499,6 +606,14 @@ address {
 
 .picture-list-item {
   width: calc((100% - 48px) / 3);
+  transition: box-shadow;
+}
+
+.picture-list-item:hover,
+.picture-list-item:focus {
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .pictures-titles {
@@ -522,4 +637,35 @@ address {
   border: 1px solid var(--cornflower);
   padding: 32px 16px;
   border-top: none;
+}
+
+.photo-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--iris);
+
+  padding: 40px 32px 120px;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.p-overlay {
+  color: var(--cloud);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.photo-container:hover .overlay,
+.photo-container:focus .overlay {
+  transform: translateY(0);
 }
