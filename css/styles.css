@@ -273,7 +273,7 @@ address {
     url(../images/main-section/people-office.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: centers;
+  background-position: center;
   max-width: 1440px;
   border: none;
   letter-spacing: 0.02em;
