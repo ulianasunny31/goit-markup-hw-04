@@ -99,6 +99,7 @@ footer .span-logo {
 
 .foot-container {
   display: flex;
+  align-items: baseline;
 }
 
 .logo-p-container {
@@ -139,9 +140,9 @@ footer .span-logo {
 }
 
 .p-social {
-  color: var(--cloud);
+  color: var(--white);
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
@@ -174,6 +175,8 @@ footer .span-logo {
 
 .header {
   border-bottom: 1px solid var(--cornflower);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .head-container {
@@ -218,7 +221,7 @@ footer .span-logo {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   width: 66px;
   height: 4px;
   border-radius: 2px;
@@ -269,6 +272,7 @@ address {
     url(/images/main-section/people-office.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: centers;
   max-width: 1440px;
   border: none;
   letter-spacing: 0.02em;
@@ -323,6 +327,8 @@ address {
   visibility: hidden;
   pointer-events: none;
   background: var(--navyblue-modal, rgba(46, 47, 66, 0.4));
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -330,8 +336,9 @@ address {
   top: 50%;
   left: 50%;
   width: 408px;
-  height: 584px;
-  transform: translate();
+  min-height: 584px;
+  transform: translate(-50% -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--dairy);
   border-radius: 4px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
@@ -348,6 +355,10 @@ address {
   background-color: var(--cornflower);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -356,6 +367,7 @@ address {
   width: 8px;
   height: 8px;
   fill: var(--navy-blue);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-modal:hover,
@@ -401,8 +413,6 @@ address {
 }
 
 .qual-icon {
-  width: 64px;
-  height: 64px;
 }
 
 .qualities-titles {
@@ -523,7 +533,6 @@ address {
 .team-social-list {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 24px;
 }
 
@@ -558,7 +567,7 @@ address {
   |============================
   */
 
-.customers-container {
+.customers-section {
   padding: 120px 0;
 }
 
@@ -593,7 +602,7 @@ address {
   color: var(--light-slate);
   width: 100%;
   height: 100%;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -603,7 +612,7 @@ address {
 
 .custom-link:hover,
 .custom-link:focus {
-  border: 1px solid var(--ocean);
+  border-color: var(--ocean);
   color: var(--ocean);
 }
 
@@ -636,6 +645,10 @@ address {
   border: 1px solid var(--cornflower);
   border-radius: 4px;
   padding: 12px 24px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .port-buttons:hover,
@@ -661,8 +674,13 @@ address {
   transition: box-shadow;
 }
 
-.picture-list-item:hover,
-.picture-list-item:focus {
+.picture-links {
+  display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.picture-links:hover,
+.picture-links:focus {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
@@ -708,12 +726,12 @@ address {
   height: 100%;
   background-color: var(--iris);
   position: absolute;
-  padding: 40px 32px 120px;
+  padding: 40px 32px;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .picture-links:hover .p-overlay,
 .picture-links:focus .p-overlay {
-  transform: translateY(0);
+  transform: translateY(0%);
 }
