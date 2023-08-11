@@ -223,7 +223,7 @@ footer .span-logo {
   position: absolute;
   left: 0;
   bottom: -1px;
-  width: 66px;
+  width: 100%;
   height: 4px;
   border-radius: 2px;
   background-color: var(--ocean);
@@ -270,7 +270,7 @@ address {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(/images/main-section/people-office.jpg);
+    url(../images/main-section/people-office.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: centers;
@@ -338,7 +338,7 @@ address {
   left: 50%;
   width: 408px;
   min-height: 584px;
-  transform: translate(-50% -50%), scale(1);
+  transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--dairy);
   border-radius: 4px;
